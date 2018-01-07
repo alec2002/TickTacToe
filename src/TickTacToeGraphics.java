@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 
 
 public class TickTacToeGraphics {
+	String XorO = "";
 JButton[] buttons;
 JFrame frame;
 JPanel panel;
@@ -27,9 +28,16 @@ public TickTacToeGraphics(){
 }
 
 public void setButtonState(int button, int state){
-	//if () {
-		
-	//}//set text
+	System.out.println(state);
+	  if (state == TickTacToeLogic.XTurn) {
+		XorO = "X";
+	}
+	  else{
+		  XorO = "O";
+	  }
+	buttons[button].setText(XorO);
+	buttons[button].setEnabled(false);
+	//set text
 	//disable button
 }
 
